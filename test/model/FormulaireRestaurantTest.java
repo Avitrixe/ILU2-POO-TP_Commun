@@ -1,5 +1,7 @@
 package model;
 
+import model.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -16,7 +18,7 @@ class FormulaireRestaurantTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() {
-		formulaire = new FormulaireRestaurant(JOUR, MOIS, NB_PERSONNES, NUM_SERVICE);
+		formulaire = new FormulaireRestaurant(JOUR, MOIS, NB_PERSONNES, NUM_SERVICE, IDENTIFICATION_1);
 	}
 
 	@Test
@@ -47,12 +49,12 @@ class FormulaireRestaurantTest {
 
 	@Test
 	void setIdentificationEntite() {
-		FormulaireRestaurant formulaire2 = new FormulaireRestaurant(JOUR, MOIS, NB_PERSONNES, NUM_SERVICE);
+		FormulaireRestaurant formulaire2 = new FormulaireRestaurant(JOUR, MOIS, NB_PERSONNES, NUM_SERVICE, IDENTIFICATION_1);
 		assertEquals(IDENTIFICATION_1, formulaire2.getIdentificationEntite(),
 				"L'identification du formulaire devrait être " + IDENTIFICATION_1);
 		formulaire2.setIdentificationEntite(IDENTIFICATION_2);
 		assertEquals(IDENTIFICATION_2, formulaire2.getIdentificationEntite(),
-				"L'identification du formulaire devrait être " + IDENTIFICATION_2);
+				"L'identification du formulaire devrait être " + IDENTIFICATION_1);
 	}
 
 	@Test

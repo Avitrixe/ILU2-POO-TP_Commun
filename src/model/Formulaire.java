@@ -2,26 +2,30 @@ package model;
 
 public abstract class Formulaire {
 	
-	protected int jourReservation;
-	protected int moisReservation;
-	protected int numerosObjet;
+	protected int jour;
+	protected int mois;
+	protected int identificationEntite;
 	
 	public Formulaire(int jourReservation, int moisReservation, int numerosObjet) {
-		this.jourReservation = jourReservation;
-		this.moisReservation = moisReservation;
-		this.numerosObjet = numerosObjet;
+		this.jour = jourReservation;
+		this.mois = moisReservation;
+		this.identificationEntite = numerosObjet;
 	}
 
-	public int getJourReservation() {
-		return jourReservation;
+	public int getJour() {
+		return jour;
 	}
 
-	public int getMoisReservation() {
-		return moisReservation;
+	public int getMois() {
+		return mois;
 	}
 
-	public int getNumerosObjet() {
-		return numerosObjet;
+	public int getIdentificationEntite() {
+		return identificationEntite;
+	}
+	
+	public void setIdentificationEntite(int newIdEntite) {
+		identificationEntite = newIdEntite;
 	}
 
 }
