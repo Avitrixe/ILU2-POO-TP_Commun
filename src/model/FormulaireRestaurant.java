@@ -5,9 +5,9 @@ public class FormulaireRestaurant extends Formulaire{
 	private int nombrePersonnes;
 	private int numerosService;
 
-	public FormulaireRestaurant(int jourReservation, int moisReservation, int nombreConvives, int numerosService, int numerosTable) {
-		super(jourReservation, moisReservation, numerosTable);
-		this.nombrePersonnes = nombreConvives;
+	public FormulaireRestaurant(int jourReservation, int moisReservation, int numerosTable, int numerosService) {
+		super(jourReservation, moisReservation);
+		this.nombrePersonnes = numerosTable;
 		this.numerosService = numerosService;
 	}
 

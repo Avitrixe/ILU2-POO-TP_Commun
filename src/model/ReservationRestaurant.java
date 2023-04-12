@@ -3,21 +3,18 @@ package model;
 public class ReservationRestaurant extends Reservation{
 	
 	private int numerosService;
+	private int numerosTable;
 	
 	public ReservationRestaurant(int jourReservation, int moisReservation, int numerosService, int numerosTable) {
-		super(jourReservation, moisReservation, numerosTable);
+		super(jourReservation, moisReservation);
 		this.numerosService = numerosService;
+		this.numerosTable = numerosTable;
 	}
 	
 	@Override
 	public String toString() {
-		StringBuilder chaine = new StringBuilder();
-		String numService;
-		if (numerosService == 1) numService = "premier";
-		else numService = "deuxième";
-		chaine.append("table n°" + super.numerosObjet + " pour le " + numService +
-				" service.\n");
-		return super.toString() + chaine.toString();
+		if (numerosService == 1)
+			return "Le "+ jourReservation + "/" + moisReservation + " : table nÂ°" + numerosTable + " pour le premier service.\n";
+		return "Le "+ jourReservation + "/" + moisReservation + " : table nÂ°" + numerosTable + " pour le deuxiÃ¨me service.\n";
 	}
-
 }

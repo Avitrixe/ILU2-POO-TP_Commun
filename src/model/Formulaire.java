@@ -6,10 +6,9 @@ public abstract class Formulaire {
 	protected int mois;
 	protected int identificationEntite;
 	
-	public Formulaire(int jourReservation, int moisReservation, int numerosObjet) {
+	public Formulaire(int jourReservation, int moisReservation) {
 		this.jour = jourReservation;
 		this.mois = moisReservation;
-		this.identificationEntite = numerosObjet;
 	}
 
 	public int getJour() {
